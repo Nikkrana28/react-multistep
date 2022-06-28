@@ -1,6 +1,6 @@
 {
   "name": "multistep-by-nikhil",
-  "version": "6.2.1",
+  "version": "6.8.7",
   "description": "multistep",
   "main": "dist/index.js",
   "files": [
@@ -20,12 +20,11 @@
     "url": "https://github.com/Nikkrana28/react-multistep"
   },
   "homepage": "https://github.com/Nikkrana28/react-multistep",
-
   "dependencies": {
     "goober": "^2.1.10"
   },
   "devDependencies": {
-    "esbuild": "0.13.15",
+    "esbuild": "^0.13.15",
     "react": "17.0.2"
   },
   "peerDependencies": {

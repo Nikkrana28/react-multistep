@@ -72,6 +72,12 @@ const NewActive = css`
   border-radius: 50%;
   color: red;
 `
+const Newdoing = css`
+  border: 1px solid #d92c2c;
+  padding: 10px 15px !important;
+  border-radius: 50%;
+  color: red;
+`
 
 const getStep = (defaultIndex, newIndex, length) => {
     if(newIndex <=  length){
@@ -172,7 +178,7 @@ export default function MultiStep (props) {
             key={i}
             value={i}
           >
-            <span className={New}>{i + 1}</span>
+            <span>{i + 1}</span>
           </Li>
         )
       } else {
@@ -183,15 +189,14 @@ export default function MultiStep (props) {
             key={i}
             value={i}
           >
-            <span className={NewActive} >{i + 1}</span>
+            <span className={NewActive}>{i + 1}</span>
           </Li>
         )
       }
     })
 
-  const renderNav = (show) =>
-  console.log("props.fill ",props.fill )
-    show && (
+  const renderNav = () =>
+   (
       <div>
         {/* <button
           style={buttonsState.showPreviousBtn ? props.prevStyle : { display: 'none' }}
@@ -205,7 +210,7 @@ export default function MultiStep (props) {
           onClick={next}
           disabled={props.fill ? "" : true}
         >
-          Next
+          Next..
         </button>
       </div>
     )
