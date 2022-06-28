@@ -20,7 +20,7 @@ const Li = styled('li')`
   color: silver;
  
 
-  
+  &:hover,
   &:before {
     color: #0FA0CE;
   }
@@ -189,25 +189,26 @@ export default function MultiStep (props) {
       }
     })
 
-  const renderNav = (show) => {
-    return ( <div>
-      <button
-        style={buttonsState.showPreviousBtn ? props.prevStyle : { display: 'none' }}
-        onClick={previous}
-      >
-        Previous
-      </button>
+  const renderNav = (show) =>
+  console.log("props.fill ",props.fill )
+    show && (
+      <div>
+        {/* <button
+          style={buttonsState.showPreviousBtn ? props.prevStyle : { display: 'none' }}
+          onClick={previous}
+        >
+          Prev
+        </button> */}
 
-      <button
-        style={buttonsState.showNextBtn && props.fill ? props.nextStyle : { display: 'none' }}
-        onClick={next}
-      >
-        Next
-      </button>
-    </div>)
-  }
-    
-    
+        <button
+          style={props.nextStyle}
+          onClick={next}
+          disabled={props.fill ? "" : true}
+        >
+          Next
+        </button>
+      </div>
+    )
 
   return (
     <div>
